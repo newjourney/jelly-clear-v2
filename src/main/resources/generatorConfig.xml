@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/jelly?nullCatalogMeansCurrent=true"
+			driverClass="com.mysql.cj.jdbc.Driver"
+			userId="root"
+			password="cptbtptp" />
+		<javaModelGenerator targetPackage="entity" targetProject="jelly-clear-v2/src/main/mybatis" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="jelly-clear-v2/src/main/mybatis" />
+		<javaClientGenerator targetPackage="mapper" targetProject="jelly-clear-v2/src/main/mybatis" type="XMLMAPPER" />
+		<table tableName="t_s_board" domainObjectName="BoardTemplate"/>
+		<table tableName="t_u_lock" domainObjectName="LockInfo"/>
+		<table tableName="t_u_player" domainObjectName="PlayerInfo"/>
+	</context>
+</generatorConfiguration>
