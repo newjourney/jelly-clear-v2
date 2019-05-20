@@ -48,6 +48,9 @@ public class GameService {
     }
 
     public String move(String sessionId, int row0, int col0, int row1, int col1) {
+        if (sessionId == null || sessionId.length() != SessionGenerator.LENGTH) {
+            return ErrorCode.ERROR_MSG;
+        }
         if (lockHelper.lock(sessionId)) {
             try {
                 return move0(sessionId, row0, col0, row1, col1);
